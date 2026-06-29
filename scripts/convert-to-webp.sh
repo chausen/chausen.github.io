@@ -1,37 +1,38 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Define output directory and desired width (optional)
-OUTPUT_DIR="webp_images"
-MAX_WIDTH="1200" # Set to desired maximum width, or remove for no downscaling based on width
+set -euo pipefail
 
-# Create output directory if it doesn't exist
-mkdir -p ""
+ROOT_DIR="assets/images"
+MAX_WIDTH="1200"
+QUALITY="80"
 
-# Loop through all common image formats in the current directory
-for img_file in *.jpg *.jpeg *.png *.gif *.tif *.tiff; do
-  # Check if the file exists (to handle cases where no matching files are found)
-  if [ -f "" ]; then
-    # Get the filename without extension
-    filename=
-    extension=""
-    filename_no_ext=""
+if command -v magick >/dev/null 2>&1; then
+  IM_CMD=(magick)
+elif command -v convert >/dev/null 2>&1; then
+  IM_CMD=(convert)
+else
+  echo "Error: ImageMagick not found. Install 'magick' or 'convert'." >&2
+  exit 1
+fi
 
-    # Construct the output WebP filename
-    output_webp="/.webp"
+if [[ ! -d "$ROOT_DIR" ]]; then
+  echo "Error: directory '$ROOT_DIR' not found." >&2
+  exit 1
+fi
 
-    # ImageMagick command for downscaling and conversion
-    # -resize ">" downscales only if the image is larger than MAX_WIDTH
-    # -quality 80 sets the WebP compression quality (0-100)
-    # -strip removes all metadata from the image
-    # -define webp:method=6 uses a slower but more effective compression method
-    if [ -n "" ]; then
-      convert "" -resize ">" -strip -quality 80 -define webp:method=6 ""
-    else
-      convert "" -strip -quality 80 -define webp:method=6 ""
-    fi
+converted=0
 
-    echo "Converted and downscaled '' to ''"
+while IFS= read -r -d '' img_file; do
+  output_webp="${img_file%.*}.webp"
+
+  if [[ -n "$MAX_WIDTH" ]]; then
+    "${IM_CMD[@]}" "$img_file" -resize "${MAX_WIDTH}>" -strip -quality "$QUALITY" -define webp:method=6 "$output_webp"
+  else
+    "${IM_CMD[@]}" "$img_file" -strip -quality "$QUALITY" -define webp:method=6 "$output_webp"
   fi
-done
 
-echo "Conversion complete. WebP images are in the '' directory."
+  converted=$((converted + 1))
+  echo "Converted '$img_file' -> '$output_webp'"
+done < <(find "$ROOT_DIR" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.gif' -o -iname '*.tif' -o -iname '*.tiff' \) -print0)
+
+echo "Conversion complete. Created $converted WebP files under '$ROOT_DIR'."

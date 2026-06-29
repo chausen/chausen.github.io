@@ -21,13 +21,13 @@ Flavor profile: Caramel, red apple, almond pastry, orange
 *Note*: I found the elevation listed for the producer's Gesha varietal [here](https://samplecoffee.com.au/coffee/finca-buenos-aires-israel-hernandez).
 
 
-![Buenos Aires coffee bag]({{site.baseurl}}/assets/images/coffee/huckleberry/buenos-aires/IMG_2008.png){: width="50%" }
+![Buenos Aires coffee bag]({{site.baseurl}}/assets/images/coffee/huckleberry/buenos-aires/IMG_2008.webp){: width="50%" }
 
 # Beans
 - On the smaller side of medium
 - Rustic
 
-![Close up of the beans]({{site.baseurl}}/assets/images/coffee/huckleberry/buenos-aires/IMG_2009.png){: width="50%" }
+![Close up of the beans]({{site.baseurl}}/assets/images/coffee/huckleberry/buenos-aires/IMG_2009.webp){: width="50%" }
 
 # Brew 1
 ```
@@ -45,9 +45,9 @@ Forgot to taste the coffee black. Adding it a bit of cream, I wasn't super impre
 - reminds me of a diner coffee, but better
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="/assets/images/coffee/huckleberry/buenos-aires/IMG_2010.png" alt="Beans ground for pour over" style="width: 30%;" />
-  <img src="/assets/images/coffee/huckleberry/buenos-aires/IMG_2011.png" alt="Grounds blooming" style="width: 30%;" />
-  <img src="/assets/images/coffee/huckleberry/buenos-aires/IMG_2013.png" alt="Pour over with cream" style="width: 30%;" />
+  <img src="/assets/images/coffee/huckleberry/buenos-aires/IMG_2010.webp" alt="Beans ground for pour over" style="width: 30%;" />
+  <img src="/assets/images/coffee/huckleberry/buenos-aires/IMG_2011.webp" alt="Grounds blooming" style="width: 30%;" />
+  <img src="/assets/images/coffee/huckleberry/buenos-aires/IMG_2013.webp" alt="Pour over with cream" style="width: 30%;" />
 </div>
 
 # Brew 2
@@ -68,7 +68,7 @@ This time, I drank it black first and preferred it that way. The flavor came thr
 - adds some richness
 - cuts the strong flavors
 
-![Pour over, black]({{site.baseurl}}/assets/images/coffee/huckleberry/buenos-aires/IMG_2015.png){: width="50%" }
+![Pour over, black]({{site.baseurl}}/assets/images/coffee/huckleberry/buenos-aires/IMG_2015.webp){: width="50%" }
 
 # Brew 3
 ```
@@ -80,7 +80,7 @@ This time, I drank it black first and preferred it that way. The flavor came thr
 - Flavor came through nicely
 - Still a bit of an earthy taste that I'm not sure I'm the biggest fan of
 
-![Cappuccino]({{site.baseurl}}/assets/images/coffee/huckleberry/buenos-aires/IMG_2018.png){: width="50%" }
+![Cappuccino]({{site.baseurl}}/assets/images/coffee/huckleberry/buenos-aires/IMG_2018.webp){: width="50%" }
 
 # Final thoughts
 Overall, a solid bean, but not my favorite. In looking online to find out the elevation and varietal, I saw the same producer makes a Gesha that Huckleberry does an annual special release for. I would like to try that one.
