@@ -1,0 +1,63 @@
+---
+layout: post
+title:  "Sweet Bloom - Kayu"
+date:   2025-06-22 10:12:00 -0600
+categories: coffee
+---
+
+# Coffee
+```coffee-attribs
+Roaster: Sweet Bloom Coffee Roasters, Denver CO
+Coffee: Kayu 
+Country: Kenya
+Origin: Murang'a
+Process: Washed
+Elevation: 1650 MSAL
+Varietal: Ruiri
+Producer: Various small plot growers
+Flavor profile: Blood orange, assam, butterscotch
+```
+
+# Brew 2: The Virtuous Pour
+```
+- Method: pour over
+- Beans: 29g
+- Water: 500mL
+- Grind: Medium-fine
+```
+
+## Black
+- clean
+- subtle, but full flavors
+- assam comes through
+
+## Cream
+- rich toffee/butterscotch flavor goes well with the cream
+- very smooth
+
+# Brew 3: A Fair Cap
+```
+- Method: cappuccino
+- Beans: 18g
+- Milk: 134g
+```
+- delicious toffee flavor
+- smooth & creamy
+- delightful
+- very subtle tartness
+
+# Brew 4
+```
+- Method: pour over
+- Beans: 29g
+- Water: 506mL
+- Grind: Medium-fine
+- Brew length: 3m 39s
+```
+
+## Black
+- nice flavor & full mouth-feel
+- assam flavor comes through
+
+## Cream
+- goes wonderfully with assam flavor

@@ -17,7 +17,7 @@ Varietal: Tabi
 Flavor profile: Blood orange, red plum, candied mango, complex
 ```
 
-![Libardo Pepicano coffee bag]({{site.baseurl}}/assets/images/coffee/middle-state/libardo-pepicano/IMG_1975.png){: width="50%" }
+![Libardo Pepicano coffee bag]({{site.baseurl}}/assets/images/coffee/middle-state/libardo-pepicano/IMG_1975.webp){: width="50%" }
 
 # Beans
 - On the smaller side of medium
@@ -25,15 +25,15 @@ Flavor profile: Blood orange, red plum, candied mango, complex
 - Rustic
 - Beautiful caramel brown
 
-![Close up of the beans]({{site.baseurl}}/assets/images/coffee/middle-state/libardo-pepicano/IMG_1981.png){: width="50%" }
+![Close up of the beans]({{site.baseurl}}/assets/images/coffee/middle-state/libardo-pepicano/IMG_1981.webp){: width="50%" }
 
 # First day drinking
 Drinking as a cappuccino, I don't taste the complex fruity notes listed on the bag. It's a delicious, balanced cup--very smooth. But the flavor notes are quite subtle and if anything I would describe them as being nutty or chocolatey.
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="/assets/images/coffee/middle-state/libardo-pepicano/IMG_1982.png" alt="Ground up beans" style="width: 30%;" />
-  <img src="/assets/images/coffee/middle-state/libardo-pepicano/IMG_1987.png" alt="Double shot" style="width: 30%;" />
-  <img src="/assets/images/coffee/middle-state/libardo-pepicano/IMG_1991.png" alt="Cappuccino" style="width: 30%;" />
+  <img src="/assets/images/coffee/middle-state/libardo-pepicano/IMG_1982.webp" alt="Ground up beans" style="width: 30%;" />
+  <img src="/assets/images/coffee/middle-state/libardo-pepicano/IMG_1987.webp" alt="Double shot" style="width: 30%;" />
+  <img src="/assets/images/coffee/middle-state/libardo-pepicano/IMG_1991.webp" alt="Cappuccino" style="width: 30%;" />
 </div>
 
 
