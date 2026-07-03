@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import BlogPostCard from '../components/BlogPostCard.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const featuredProjects = allProjects.filter(p => p.data.featured).sort((a, b) => (a.data.order || 99) - (b.data.order || 99)).slice(0, 3);
+
+const allPosts = await getCollection('blog', ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
+});
+const recentPosts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 3);
+---
+<BaseLayout>
+  <section class="min-h-[70vh] flex flex-col justify-center">
+    <h1 class="text-5xl sm:text-7xl font-bold tracking-tighter mb-6 text-foreground">
+      Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-hover">Clay</span>.
+    </h1>
+    <p class="text-xl sm:text-2xl text-foreground/80 max-w-2xl leading-relaxed mb-10">
+      Software engineer building fast, polished, and maintainable applications.
+      I specialize in creating robust digital experiences with a focus on modern web technologies.
+    </p>
+    <div class="flex gap-4">
+      <a href="/projects" class="px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-primary-hover transition-colors shadow-lg shadow-primary/20 text-center">View Projects</a>
+      <a href="/resume" class="px-6 py-3 bg-card-bg border border-card-border rounded-full font-medium hover:border-primary transition-colors text-center">Resume</a>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <SectionHeading title="Featured Projects" />
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {featuredProjects.map(project => (
+        <ProjectCard project={project} />
+      ))}
+    </div>
+    <div class="mt-8 text-center sm:text-left">
+      <a href="/projects" class="text-primary hover:text-primary-hover font-medium transition-colors">See all projects &rarr;</a>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <SectionHeading title="Recent Writing" />
+    <div class="flex flex-col gap-6 max-w-2xl">
+      {recentPosts.map(post => (
+        <BlogPostCard post={post} />
+      ))}
+    </div>
+    <div class="mt-8 text-center sm:text-left">
+      <a href="/blog" class="text-primary hover:text-primary-hover font-medium transition-colors">Read all posts &rarr;</a>
+    </div>
+  </section>
+</BaseLayout>

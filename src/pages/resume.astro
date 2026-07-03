@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+---
+<BaseLayout title="Resume | chausen.dev">
+  <SectionHeading title="Resume" />
+  <div class="max-w-3xl mx-auto p-8 rounded-2xl bg-card-bg border border-card-border backdrop-blur-sm">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+      <div>
+        <h2 class="text-2xl font-bold text-foreground">Clay</h2>
+        <p class="text-primary font-medium">Software Engineer</p>
+      </div>
+    </div>
+    
+    <div class="space-y-8">
+      <section>
+        <h3 class="text-xl font-bold border-b border-card-border pb-2 mb-4">Experience</h3>
+        <div class="space-y-6">
+          <div>
+            <div class="flex justify-between items-baseline mb-1">
+              <h4 class="font-bold">Software Engineer</h4>
+              <span class="text-sm text-foreground/60">Date - Present</span>
+            </div>
+            <p class="text-sm text-primary mb-2">Company Name</p>
+            <ul class="list-disc list-inside text-sm text-foreground/80 space-y-1">
+              <li>Developed robust software solutions and microservices.</li>
+              <li>Collaborated with cross-functional teams to deliver high-quality products.</li>
+              <li>Improved system performance and reliability.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="text-xl font-bold border-b border-card-border pb-2 mb-4">Skills</h3>
+        <div class="flex flex-wrap gap-2">
+          {['Java', 'TypeScript', 'Astro', 'Tailwind CSS', 'React', 'Node.js', 'Testing', 'Git'].map(skill => (
+            <span class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded-md text-sm">{skill}</span>
+          ))}
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

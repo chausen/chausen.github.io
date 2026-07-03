@@ -1,0 +1,21 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import TagList from '../components/TagList.astro';
+
+const { frontmatter } = Astro.props;
+const date = new Date(frontmatter.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<BaseLayout title={`${frontmatter.title} | chausen.dev`} description={frontmatter.description}>
+  <article class="max-w-3xl mx-auto prose prose-invert prose-p:text-foreground/80 prose-headings:text-foreground prose-a:text-primary hover:prose-a:text-primary-hover prose-img:rounded-xl">
+    <header class="mb-10 text-center not-prose">
+      <time class="text-sm text-primary font-medium block mb-2">{date}</time>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-6">{frontmatter.title}</h1>
+      <div class="flex justify-center">
+        <TagList tags={frontmatter.tags} />
+      </div>
+    </header>
+    <div class="mt-8">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
