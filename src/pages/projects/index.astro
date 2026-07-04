@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const projects = allProjects.sort((a, b) => (a.data.order || 99) - (b.data.order || 99));
+---
+<BaseLayout title="Projects | chausen.dev" description="A collection of my work.">
+  <SectionHeading title="Projects" />
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {projects.map(project => (
+      <ProjectCard project={project} />
+    ))}
+  </div>
+</BaseLayout>
