@@ -100,7 +100,7 @@ const projects = [
         </p>
       </div>
       <div class="text-sm text-foreground/68 sm:text-right leading-relaxed">
-        <a href="mailto:clayhausen@gmail.com" class="text-primary hover:text-primary-hover transition-colors">clayhausen@gmail.com</a>
+        <span id="resume-email" aria-live="polite">clayhausen [at] gmail [dot] com</span>
         <div>Denver, CO</div>
       </div>
     </header>
@@ -168,3 +168,19 @@ const projects = [
     </div>
   </article>
 </BaseLayout>
+
+<script>
+  // Build the email client-side so basic scrapers do not see a plain address in HTML.
+  const emailTarget = document.getElementById('resume-email');
+
+  if (emailTarget) {
+    const userCodes = [99, 108, 97, 121, 104, 97, 117, 115, 101, 110];
+    const domainCodes = [103, 109, 97, 105, 108, 46, 99, 111, 109];
+
+    const user = String.fromCharCode(...userCodes);
+    const domain = String.fromCharCode(...domainCodes);
+    const email = `${user}@${domain}`;
+
+    emailTarget.innerHTML = `<a href="mailto:${email}" class="text-primary hover:text-primary-hover transition-colors">${email}</a>`;
+  }
+</script>
