@@ -16,3 +16,118 @@
     overflow-x: hidden;
   }
 }
+
+@layer components {
+  .content-prose {
+    max-width: 48rem;
+  }
+
+  .content-prose :where(h1, h2, h3, h4) {
+    letter-spacing: -0.03em;
+    scroll-margin-top: 6rem;
+    font-weight: 600;
+  }
+
+  .content-prose :where(h2) {
+    margin-top: 2.75rem;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    line-height: 1.05;
+  }
+
+  .content-prose :where(h3) {
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: clamp(1.4rem, 2.8vw, 1.75rem);
+    line-height: 1.15;
+  }
+
+  .content-prose :where(p, ul, ol, pre, blockquote) {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-prose :where(ul, ol) {
+    padding-left: 1.5rem;
+  }
+
+  .content-prose :where(ul) {
+    list-style: disc;
+  }
+
+  .content-prose :where(ol) {
+    list-style: decimal;
+  }
+
+  .content-prose :where(li) {
+    display: list-item;
+    margin-top: 0.45rem;
+    margin-bottom: 0.45rem;
+    padding-left: 0.2rem;
+  }
+
+  .content-prose :where(ul > li)::marker {
+    color: color-mix(in srgb, var(--color-primary) 72%, white 28%);
+  }
+
+  .content-prose :where(ol > li)::marker {
+    color: color-mix(in srgb, var(--color-primary) 68%, white 32%);
+    font-weight: 600;
+  }
+
+  .content-prose :where(code):not(:where(pre code)) {
+    border: 1px solid var(--color-card-border);
+    border-radius: 0.45rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.15rem 0.4rem;
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+
+  .content-prose :where(code):not(:where(pre code))::before,
+  .content-prose :where(code):not(:where(pre code))::after {
+    content: none;
+  }
+
+  .content-prose :where(pre) {
+    overflow-x: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    background: linear-gradient(180deg, rgba(37, 40, 48, 0.92), rgba(27, 30, 37, 0.96));
+    padding: 1.15rem 1.25rem;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  }
+
+  .content-prose :where(pre code) {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font-size: 0.96rem;
+    line-height: 1.6;
+  }
+
+  .content-prose :where(blockquote) {
+    border-left: 4px solid rgba(255, 255, 255, 0.22);
+    margin-left: 0;
+    padding: 0.2rem 0 0.2rem 1.15rem;
+    color: rgba(240, 240, 240, 0.7);
+    font-style: italic;
+    font-size: 1.08rem;
+    line-height: 1.75;
+  }
+
+  .content-prose :where(blockquote p:first-child) {
+    margin-top: 0;
+  }
+
+  .content-prose :where(blockquote p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .content-prose :where(img) {
+    display: block;
+    margin: 1.75rem auto;
+    border-radius: 1.75rem;
+    max-width: 100%;
+  }
+}
